@@ -8,9 +8,11 @@ layout: default
 >在Unity中粒子特效就可以制作飘烟拖尾，但是如果运动过快难免会有不自然的断开。虽然粒子中加入了Trail，但是我让拖尾转角圆滑比较困难（这方面还得请教特效同学）。当然如果对转角没有要求，粒子还是最简单的。
 
 粒子拖尾效果:
+
 ![Branching](../../assets/img/tail_smoke/test1.gif)
 
-Line Renderer拖尾
+Line Renderer拖尾：
+
 ![Branching](../../assets/img/tail_smoke/test2.gif)
 
 我们在unity中创建gameobject，添加line renderer组件。
