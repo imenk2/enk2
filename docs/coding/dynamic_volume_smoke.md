@@ -17,7 +17,7 @@ last_modified_at: 2025-11-26
 
 测试纹理为32x32x32（0.5mb），生长过程完成后，可以叠加其他动态噪声让烟雾真正的动起来。
 
-这个方案youtube上其实早就有人实现了类似的结果，对方优化的更加彻底。不过我将内容节省为一个单通道灰阶像了, 这样动态上可能没有对方丰富。
+这个方案youtube上其实早就有人实现了类似的结果，对方优化的更加彻底。
 
 [Unity Volumetric Explosions](https://www.youtube.com/watch?v=Qn7XZ9bMpYo)
 
