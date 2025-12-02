@@ -29,6 +29,11 @@ layout: default
 
 <div class="note-list">
     <div class="note-item" data-category="unity">
+        <a href="./docs/coding/anime_face_deformation.html">2025/11/28 Unity 卡通渲染面部形变</a>
+        <span class="note-tag">Unity</span>
+    </div>
+
+    <div class="note-item" data-category="unity">
         <a href="./docs/coding/hair_volume_intensity.html">2025/11/26 Unity 头发动态密度测试</a>
         <span class="note-tag">Unity</span>
     </div>

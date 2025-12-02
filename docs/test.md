@@ -127,6 +127,47 @@ _yay_
 //可点开放大的图片2
 [![Branching](../../assets/img/render_graph/image3.png)](../../assets/img/render_graph/image3.png){:target="_blank" rel="noopener noreferrer"}
 
+## 带大小调整的图片
+<img src="/assets/images/example.jpg" alt="示例图片" width="50%"/>
+<img src="/assets/images/example.jpg" width="200" height="200"/>
+![我的图片](/assets/img/photo.jpg){: width="50%" }
+
+## 带大小调整的图片间隔距离去除
+![我的图片1](/assets/img/photo.jpg){: width="50%" .left} ![我的图片1](/assets/img/photo.jpg){: width="50%" .right}
+
+## 带说明文字的图片
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 10px;">
+
+    <!-- 左边的图+文 -->
+    <div style="width: 45%; text-align: center;">
+        <img src="/assets/img/1.jpg" style="width: 100%; border-radius: 5px;" alt="图1">
+        <div style="color: #666; font-size: 14px; margin-top: 4px;">图1说明文字</div>
+    </div>
+
+    <!-- 右边的图+文 -->
+    <div style="width: 45%; text-align: center;">
+        <img src="/assets/img/2.jpg" style="width: 100%; border-radius: 5px;" alt="图2">
+        <div style="color: #666; font-size: 14px; margin-top: 4px;">图2说明文字</div>
+    </div>
+
+</div>
+
+<table style="width: auto; margin: 0 auto; border: none;">
+  <tr style="border: none;">
+    <!-- padding: 5px 控制单元格间距，改小一点就紧凑了 -->
+    <td style="padding: 5px; border: none; text-align: center;">
+      <img src="/assets/img/1.jpg" width="200" /><br>
+      <small>图1说明</small>
+    </td>
+    <td style="padding: 5px; border: none; text-align: center;">
+      <img src="/assets/img/2.jpg" width="200" /><br>
+      <small>图2说明</small>
+    </td>
+  </tr>
+</table>
+
+
+
 ## 超链接
 [参考](https://www.zhihu.com/question/263561970/answer/273922231)
 
