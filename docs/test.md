@@ -122,6 +122,12 @@ The final element.
 
 _yay_
 
+### 公式
+$$
+n= \frac{\frac{(n1+n2)}{2}}{|\frac{(n1 + n2)}{2}|} = (\frac{\frac{(x1+x2)}{2}}{len},\frac{\frac{(y1+y2)}{2}}{len},\frac{\frac{(z1+z2)}{2}}{len})
+$$
+
+
 ## 可点开放大的图片1
 {% include image-lightbox.html url="/assets/img/render_graph/image3.png" title="core sample" %}
 //可点开放大的图片2
@@ -154,12 +160,12 @@ _yay_
 
 <table style="width: auto; margin: 0 auto; border: none;">
   <tr style="border: none;">
-    <!-- padding: 5px 控制单元格间距，改小一点就紧凑了 -->
-    <td style="padding: 5px; border: none; text-align: center;">
+    <!-- padding: 5px 文字中心对齐，垂直顶部对齐 -->
+    <td style="padding: 5px; border: none; text-align: center;vertical-align: top;">
       <img src="/assets/img/1.jpg" width="200" /><br>
       <small>图1说明</small>
     </td>
-    <td style="padding: 5px; border: none; text-align: center;">
+    <td style="padding: 5px; border: none; text-align: center;vertical-align: top;">
       <img src="/assets/img/2.jpg" width="200" /><br>
       <small>图2说明</small>
     </td>
