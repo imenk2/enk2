@@ -2,122 +2,77 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+<div class="linked-headings-container">
+  <h1><a href="./coding-page.html">Notes</a></h1>
+  <h1><a href="./project-page.html">Project</a></h1>
+  <h1><a href="./question-page.html">Question</a></h1>
+</div>
 
-[Link to another page](./another-page.html).
+***
 
-There should be whitespace between paragraphs.
+<h3>最新更新的文章</h3>
+<ul>
+  {% assign pages_in_docs = site.pages | where_exp: "page", "page.path contains 'docs/'" %}
+  {% assign updated_pages = pages_in_docs | where_exp: "page", "page.last_modified_at" | sort: "last_modified_at" | reverse %}
+  {% assign regular_pages = pages_in_docs | where_exp: "page", "page.last_modified_at == nil" | sort: "date" | reverse %}
+  {% assign all_sorted_pages = updated_pages | concat: regular_pages %}
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+  {% for page in all_sorted_pages limit:3 %}
+    <li>
+      <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
+      - <small>
+        {% if page.last_modified_at %}
+          更新于: {{ page.last_modified_at | date: "%Y-%m-%d" }}
+        {% else %}
+          发布于: {{ page.date | date: "%Y-%m-%d" }}
+        {% endif %}
+      </small>
+    </li>
+  {% endfor %}
+</ul>
 
-# Header 1
+***
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-## Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
+<script src="https://utteranc.es/client.js"
+        repo="imenk2/enk2"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
 
 
-### Definition lists can be used with HTML syntax.
+<div class="visitor-count">
+  <p>总访问量: <span id="count">加载中...</span></p>
+</div>
 
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
 
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+<script>
+  // 使用CountAPI实现访客计数
+  const counterElement = document.getElementById('count');
+  const namespace = 'enk2';
+  const key = 'visitors';
+  
+  // 尝试从本地存储获取计数，减少API调用
+  const storedCount = localStorage.getItem('visitorCount');
+  if (storedCount) {
+    counterElement.textContent = storedCount;
+  }
+  
+  // 调用CountAPI增加计数并获取最新值
+  fetch(`https://api.countapi.xyz/update/${namespace}/${key}/?amount=1`)
+    .then(response => response.json())
+    .then(data => {
+      const newCount = data.value;
+      counterElement.textContent = newCount;
+      // 存储到本地存储
+      localStorage.setItem('visitorCount', newCount);
+    })
+    .catch(error => {
+      console.error('Error fetching visitor count:', error);
+      // 出错时使用本地存储的值或默认值
+      if (!storedCount) {
+        counterElement.textContent = '1';
+      }
+    });
+</script>

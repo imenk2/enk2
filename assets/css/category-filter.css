@@ -1,0 +1,96 @@
+/**
+ * 通用分类筛选样式
+ * 用于网站中的分类筛选功能
+ * 与category-filter.js配合使用
+ */
+
+/* 分类容器样式 */
+.category-container {
+    margin: 20px 0;
+    padding: 10px;
+    background: #222;
+    border-radius: 5px;
+    border: 1px solid #444;
+}
+
+/* 分类按钮容器 */
+.category-buttons {
+    margin-bottom: 10px;
+}
+
+/* 分类按钮样式 */
+.category-btn {
+    display: inline-block;
+    padding: 5px 12px;
+    margin: 5px;
+    background: #333;
+    color: #ccc;
+    border: 1px solid #555;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    /* 移除默认按钮样式 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* 分类按钮悬停效果 */
+.category-btn:hover {
+    background: #444;
+    color: #fff;
+    border-color: #666;
+}
+
+/* 分类按钮激活状态 */
+.category-btn.active {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+    box-shadow: 0 0 5px rgba(255,255,255,0.2);
+}
+
+/* 项目列表容器 */
+.note-list {
+    margin-top: 20px;
+}
+
+/* 单个项目项 */
+.note-item {
+    margin: 10px 0;
+    padding: 5px 0;
+    border-bottom: 1px dashed #444;
+}
+
+/* 项目标签样式 */
+.note-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    margin-left: 10px;
+    font-size: 12px;
+    color: #ccc;
+    background: #333;
+    border: 1px solid #555;
+    border-radius: 3px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .category-btn {
+        display: block;
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .note-item {
+        padding: 10px 0;
+    }
+    
+    .note-tag {
+        display: block;
+        margin: 5px 0 0 0;
+        width: fit-content;
+    }
+}
