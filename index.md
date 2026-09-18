@@ -29,5 +29,6 @@ layout: default
 
 <div class="visitor-count">
   <script data-goatcounter="https://enk2.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-  <p>总访问量: <img src="https://enk2.goatcounter.com/counter/" alt="访问量" style="vertical-align: middle;" /></p>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <p>总访问量: <span id="busuanzi_value_site_pv">加载中...</span> 次</p>
 </div>
