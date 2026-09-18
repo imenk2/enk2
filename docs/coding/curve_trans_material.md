@@ -1,6 +1,7 @@
 ---
-layout: default
+category: unity
 ---
+-
 
 # Unity 后处理：曲线参数传递材质球
 
@@ -33,5 +34,3 @@ private void OnValidate()
     //避免一直setPixels
 }
 ```
-
-[back](../../coding-page.html)

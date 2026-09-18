@@ -1,10 +1,7 @@
 ---
-layout: default
-
-title: Untiy 动态体积烟雾效果
-date: 2025-11-26
-last_modified_at: 2025-11-26
+category: unity
 ---
+-
 
 # 动态体积烟雾效果
 
@@ -20,7 +17,3 @@ last_modified_at: 2025-11-26
 这个方案youtube上其实早就有人实现了类似的结果，对方优化的更加彻底。
 
 [Unity Volumetric Explosions](https://www.youtube.com/watch?v=Qn7XZ9bMpYo)
-
-***
-
-[back](../../coding-page.html)

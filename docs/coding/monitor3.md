@@ -1,9 +1,7 @@
 ---
-layout: default
-title: 示波器 3
-date: 2022-12-29
-last_modified_at: 2022-12-29
+category: other
 ---
+-
 
 **示波器可做什么？**
 
@@ -124,6 +122,3 @@ LUTs检查
 
 
 量化画面信息并展示结果，这就是“示波器”
-
-
-[back](../../coding-page.html)

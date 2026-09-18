@@ -1,5 +1,4 @@
 ---
-layout: default
 ---
 
 
@@ -39,8 +38,3 @@ half4 frag(v2f i) : SV_Target
 
 ### RT上直接显示模型，但需要修改显示顺序
 >renderer中有order属性，修改即可
-
-
-***
-
-[back](../../question-page.html)

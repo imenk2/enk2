@@ -1,10 +1,7 @@
 ---
-layout: default
-
-title: untiy6 render graph
-date: 2025-09-16
-last_modified_at: 2025-09-16
+category: study
 ---
+-
 
 # Render Graph
 ***
@@ -157,5 +154,3 @@ builder.SetRenderFunc((PassData data, RasterGraphContext context) =>
     ExecutePass(data, context);
 });
 ```
-***
-[back](../../coding-page.html)

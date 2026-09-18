@@ -1,10 +1,7 @@
 ---
-layout: default
-
-title: water line
-date: 2025-09-16
-last_modified_at: 2025-09-16
+category: unity
 ---
+-
 
 # 吃水线
 ***
@@ -603,8 +600,4 @@ Shader "Unlit/water_test"
     }
 }
 ```
-
-
-[back](../../coding-page.html)
-
 

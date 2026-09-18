@@ -1,10 +1,7 @@
 ---
-layout: default
-
-title: 眼球焦散调研
-date: 2021-12-21
-last_modified_at: 2025-10-10
+category: study
 ---
+-
 
 # 眼球焦散调研
 
@@ -116,8 +113,3 @@ float3 caustic = ApplyCausticToDiffuse(dlIris.diffuse, c, bsdfData.mask.x, bsdfD
 diffuse = (1.f - bsdfData.mask.x) * dl.diffuse + caustic;
 
 ```
-
-
-***
-
-[back](../../coding-page.html)

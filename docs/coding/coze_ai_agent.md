@@ -1,10 +1,7 @@
 ---
-layout: default
-
-title: coze ai agent 学习记录
-date: 2025-10-24
-last_modified_at: 2025-10-31
+category: study
 ---
+-
 
 ***
 
@@ -124,7 +121,3 @@ except Exception as e:
 
 # 关于收费
 >使用字节的大模型或api调用在线工作流需要消耗扣子点数
-
-***
-
-[back](../../coding-page.html)

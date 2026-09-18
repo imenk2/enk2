@@ -1,6 +1,7 @@
 ---
-layout: default
+category: unity
 ---
+-
 
 
 # Unity中利用Line Renderer || Trail Renderer 制作飘烟拖尾
@@ -196,6 +197,3 @@ _trail.emitting = true;
 trail本身是可以在组件中设置更多参数的
 
 严格来说这只是拖尾，至于是不是烟雾还是要靠材质球表现了
-
-
-[back](../../coding-page.html)

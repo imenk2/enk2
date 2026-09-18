@@ -1,6 +1,7 @@
 ---
-layout: default
+category: max
 ---
+-
 
 # 顶点动画烘焙到图
 有时候需要一些流体或者顶点动画，而如果存成animation或者abc文件 数据将会过大。
@@ -26,6 +27,3 @@ Filter Mode: point
 采样(float2(uv2.x, _Time.y))，对采样结果进行缩小（0-0.1）作为位置赋值给positionOS。
 
 顶点数据烘焙到uv的好处是可以省去顶点计算或者刷权重的一步，更加直观的调整首尾帧。
-
-
-[back](../../coding-page.html)

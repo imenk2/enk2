@@ -1,6 +1,7 @@
 ---
-layout: default
+category: study
 ---
+-
 
 <font color=blue>前言：</font>
 <font color=blue>本文适合为material界面简单定制时使用。</font>
@@ -262,7 +263,3 @@ GUILayout.Box(new GUIContent(), GUILayout.Width(slider*e.width));
 最后是可用控件doc
 
 https://docs.unity3d.com/cn/2019.4/ScriptReference/EditorGUI.html
-
-
-
-[back](../../coding-page.html)

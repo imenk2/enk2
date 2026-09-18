@@ -1,5 +1,4 @@
 ---
-layout: default
 ---
 
 ### 真机着色出现 NaN/Infinite
@@ -39,9 +38,3 @@ Toggle生成 property_ON关键字，打断srp需要在打包时清理关键字�
 
 ### time动画因为运行时间久而抽搐
 >移动端小数位精度只到后五位精确，超过即可出现截断，建议 time.y % 120 做循环
-
-
-
-***
-
-[back](../../question-page.html)

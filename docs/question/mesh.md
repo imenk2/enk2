@@ -1,5 +1,4 @@
 ---
-layout: default
 ---
 
 ### 角色平滑法线如果要保存，建议存入uv中
@@ -15,8 +14,3 @@ layout: default
 
 ### fbx模型uv数据
 >即便在3d软件中生成并计算了vector4 类型uv数据，最终保存到fbx中的仍然为vector2
-
-
-
-***
-[back](../../question-page.html)

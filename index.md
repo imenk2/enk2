@@ -2,34 +2,19 @@
 layout: default
 ---
 
-<div class="linked-headings-container">
-  <h1><a href="./coding-page.html">Notes</a></h1>
-  <h1><a href="./project-page.html">Project</a></h1>
-  <h1><a href="./question-page.html">Question</a></h1>
-</div>
+# 欢迎来到 Enk2 Blog
 
-***
+这里是我的个人学习记录博客，主要记录在 **Unity 自定义渲染管线**、**Shader/HLSL 图形编程**、**Unity URP/HDRP** 以及 **3ds Max 工具开发**等方面的实践与探索。
 
-<h3>最新更新的文章</h3>
-<ul>
-  {% assign pages_in_docs = site.pages | where_exp: "page", "page.path contains 'docs/'" %}
-  {% assign updated_pages = pages_in_docs | where_exp: "page", "page.last_modified_at" | sort: "last_modified_at" | reverse %}
-  {% assign regular_pages = pages_in_docs | where_exp: "page", "page.last_modified_at == nil" | sort: "date" | reverse %}
-  {% assign all_sorted_pages = updated_pages | concat: regular_pages %}
+内容涵盖渲染特性、材质效果、Shader GUI、性能优化、工具脚本等，既是知识沉淀，也希望能帮到同行。
 
-  {% for page in all_sorted_pages limit:3 %}
-    <li>
-      <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
-      - <small>
-        {% if page.last_modified_at %}
-          更新于: {{ page.last_modified_at | date: "%Y-%m-%d" }}
-        {% else %}
-          发布于: {{ page.date | date: "%Y-%m-%d" }}
-        {% endif %}
-      </small>
-    </li>
-  {% endfor %}
-</ul>
+## 内容导航
+
+| 入口 | 说明 |
+|:-----|:-----|
+| [Notes](./coding-page.html) | 技术笔记与学习记录，按分类筛选 |
+| [Project](./project-page.html) | 开源项目仓库 |
+| [Question](./question-page.html) | 开发中遇到的问题与解决方案 |
 
 ***
 
@@ -43,36 +28,6 @@ layout: default
 
 
 <div class="visitor-count">
-  <p>总访问量: <span id="count">加载中...</span></p>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <p>总访问量: <span id="busuanzi_value_site_pv">加载中...</span> 次</p>
 </div>
-
-
-<script>
-  // 使用CountAPI实现访客计数
-  const counterElement = document.getElementById('count');
-  const namespace = 'enk2';
-  const key = 'visitors';
-  
-  // 尝试从本地存储获取计数，减少API调用
-  const storedCount = localStorage.getItem('visitorCount');
-  if (storedCount) {
-    counterElement.textContent = storedCount;
-  }
-  
-  // 调用CountAPI增加计数并获取最新值
-  fetch(`https://api.countapi.xyz/update/${namespace}/${key}/?amount=1`)
-    .then(response => response.json())
-    .then(data => {
-      const newCount = data.value;
-      counterElement.textContent = newCount;
-      // 存储到本地存储
-      localStorage.setItem('visitorCount', newCount);
-    })
-    .catch(error => {
-      console.error('Error fetching visitor count:', error);
-      // 出错时使用本地存储的值或默认值
-      if (!storedCount) {
-        counterElement.textContent = '1';
-      }
-    });
-</script>

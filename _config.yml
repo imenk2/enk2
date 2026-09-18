@@ -5,6 +5,21 @@ show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal   
 
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+
+defaults:
+  - scope:
+      path: "docs/coding"
+    values:
+      layout: "default"
+  - scope:
+      path: "docs/question"
+    values:
+      layout: "default"
+
 include:
   - "docs"
 

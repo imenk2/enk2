@@ -1,10 +1,7 @@
 ---
-layout: default
-
-title: 卡通渲染脸部阴影调研
-date: 2025-09-25
-last_modified_at: 2025-09-25
+category: study
 ---
+-
 
 # 卡通渲染脸部阴影调研
 
@@ -68,7 +65,3 @@ half SDF = -SDFDir;// 用于翻转法线X方向
 half cheekMask = saturate(SDFDir);// 截取脸颊Mask
 half noseMask = saturate((0.5 - sdfValue) * 2.0);// 截取鼻翼Mask
 ```
-
-***
-
-[back](../../coding-page.html)

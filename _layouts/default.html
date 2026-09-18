@@ -24,6 +24,23 @@
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
+        <nav class="sidebar-nav">
+          <a href="{{ '/coding-page.html' | relative_url }}">Notes</a>
+          <a href="{{ '/project-page.html' | relative_url }}">Project</a>
+          <a href="{{ '/question-page.html' | relative_url }}">Question</a>
+        </nav>
+
+        <div class="sidebar-recent">
+          <h3>最新文章</h3>
+          <ul>
+            {% assign coding_pages = site.pages | where_exp: "p", "p.path contains 'docs/coding/'" %}
+            {% assign recent_pages = coding_pages | sort: "last_modified_at" | reverse %}
+            {% for p in recent_pages limit:5 %}
+              <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+
         {% if site.github.is_project_page %}
         <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
         {% endif %}
@@ -44,6 +61,23 @@
 
       {{ content }}
 
+      {% assign page_url = page.url %}
+      {% if page_url contains 'docs/coding/' %}
+        {% assign back_url = '/coding-page.html' %}
+        {% assign back_label = '返回笔记列表' %}
+      {% elsif page_url contains 'docs/question/' %}
+        {% assign back_url = '/question-page.html' %}
+        {% assign back_label = '返回问题列表' %}
+      {% elsif page_url == '/coding-page.html' or page_url == '/project-page.html' or page_url == '/question-page.html' %}
+        {% assign back_url = '/' %}
+        {% assign back_label = '返回首页' %}
+      {% endif %}
+
+      {% if back_url %}
+      <hr>
+      <p class="back-link"><a href="{{ back_url | relative_url }}">&#8592; {{ back_label }}</a></p>
+      {% endif %}
+
       </section>
       <footer>
         {% if site.github.is_project_page %}
@@ -55,5 +89,23 @@
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="{{ "/assets/js/lightbox.min.js" | relative_url }}"></script>
+    <script>
+      document.querySelectorAll('pre').forEach(function(pre) {
+        if (pre.parentElement.tagName === 'DETAILS') return;
+        var code = pre.querySelector('code');
+        var lang = '';
+        if (code && code.className) {
+          var m = code.className.match(/language-(\w+)/);
+          if (m) lang = m[1];
+        }
+        var details = document.createElement('details');
+        details.className = 'code-collapse';
+        var summary = document.createElement('summary');
+        summary.textContent = lang ? '\u25B6 ' + lang + ' 代码' : '\u25B6 代码';
+        pre.parentNode.insertBefore(details, pre);
+        details.appendChild(summary);
+        details.appendChild(pre);
+      });
+    </script>
   </body>
 </html>

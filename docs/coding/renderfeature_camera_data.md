@@ -1,6 +1,7 @@
 ---
-layout: default
+category: study
 ---
+-
 在做屏幕相关效果时，不可避免地我们要对相机画面做修改，但是你去修改的相机是哪个？如果不做处理，可能会scene有效果，game没效果。
 
 ```csharp
@@ -103,6 +104,3 @@ private void Dispose()
     _cacheData.Clear();
 }
 ```
-
-
-[back](../../coding-page.html)

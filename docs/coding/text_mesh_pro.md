@@ -1,6 +1,7 @@
 ---
-layout: default
+category: unity ui
 ---
+-
 
 ![Branching](../../assets/img/text_mesh_pro/show.gif)
 
@@ -112,5 +113,3 @@ shader实现浮动文字动画[链接](http://sketchhousegames.com/blog/2020/mak
 float _AnimationVerts[16]
 ```
 ![Branching](../../assets/img/text_mesh_pro/code10.png)
-
-[back](../../coding-page.html)

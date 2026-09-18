@@ -1,6 +1,7 @@
 ---
-layout: default
+category: unity
 ---
+-
 
 # Unity 动态修改模型Material实现遮挡半透
 ```csharp
@@ -59,6 +60,3 @@ public class TransparentMaterial : MonoBehaviour
 ```
 
 ![Branching](../../assets/img/material_transparent_set/blend_mod.png)
-
-
-[back](../../coding-page.html)

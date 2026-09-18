@@ -20,3 +20,169 @@
     color: hsl(224, 100%, 64%); 
     font-weight: bold; /* 让数字加粗，更显眼 */
   }
+/* 左侧栏导航 */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 20px 0;
+  padding: 10px 0;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+}
+
+.sidebar-nav a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.sidebar-nav a:hover {
+  color: #fff;
+}
+
+/* 左侧栏最新文章 */
+.sidebar-recent {
+  margin: 20px 0;
+}
+
+.sidebar-recent h3 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+.sidebar-recent ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-recent li {
+  margin: 6px 0;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.sidebar-recent a {
+  color: #aaa;
+  display: block;
+}
+
+.sidebar-recent a:hover {
+  color: #fff;
+}
+
+/* 返回链接 */
+.back-link a {
+  font-size: 14px;
+  color: #267CB9;
+}
+
+.back-link a:hover {
+  color: #069;
+  font-weight: bold;
+}
+
+/* 代码块折叠 */
+.code-collapse {
+  margin: 0 0 20px;
+  background: #2d2d2d;
+  border: 1px solid #444;
+  border-radius: 5px;
+}
+
+.code-collapse summary {
+  cursor: pointer;
+  padding: 8px 15px;
+  color: #23bcf8;
+  font-family: Monaco, Consolas, monospace;
+  font-size: 12px;
+  user-select: none;
+  list-style: none;
+}
+
+.code-collapse summary::-webkit-details-marker {
+  display: none;
+}
+
+.code-collapse summary:hover {
+  color: #fff;
+}
+
+.code-collapse[open] summary {
+  border-bottom: 1px solid #444;
+}
+
+.code-collapse pre {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
+/* ===== 移动端竖屏适配 ===== */
+@media (max-width: 768px) {
+  header {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .sidebar-recent ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .sidebar-recent li {
+    font-size: 11px;
+  }
+
+  section {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 0;
+    float: none;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  h1 { font-size: 22px; }
+  h2 { font-size: 18px; }
+  body { font-size: 13px; }
+}
+
+@media (max-width: 480px) {
+  .sidebar-nav {
+    gap: 8px;
+  }
+
+  .sidebar-nav a {
+    font-size: 14px;
+  }
+
+  h1 { font-size: 20px; }
+  body { font-size: 12px; padding: 10px; }
+}

@@ -1,10 +1,7 @@
 ---
-layout: default
-
-title: 示波器 2
-date: 2022-12-29
-last_modified_at: 2022-12-29
+category: other
 ---
+-
 
 前篇我们对场景六基色色相和白平衡还有明度进行了验证，对黑白场做了微调。后面我们还需要对场景调光。
 
@@ -127,6 +124,3 @@ B（brightness）表示亮度
 
 
 [拾色色盘小工具推荐Adobe](https://color.adobe.com/zh/create/color-wheel)   
-
-
-[back](../../coding-page.html)

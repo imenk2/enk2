@@ -1,10 +1,7 @@
 ---
-layout: default
-
-title: 自定义 Scene View 工具栏 Draw Mode
-date: 2025-11-03
-last_modified_at: 2025-11-03
+category: unity tool
 ---
+-
 
 # 自定义 Scene View 工具栏 Draw Mode
 
@@ -107,9 +104,3 @@ public class ShaderComplexityEditor : ScriptableSingleton<ShaderComplexityEditor
     }
 }
 ```
-
-
-
-***
-
-[back](../../coding-page.html)

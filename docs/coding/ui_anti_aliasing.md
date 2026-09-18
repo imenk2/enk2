@@ -1,6 +1,7 @@
 ---
-layout: default
+category: unity ui
 ---
+-
 
 ![Branching](../../assets/img/ui_anti_aliasing/test1.gif)
 
@@ -182,5 +183,3 @@ Shader "Custom/UI/UIAA"
 }
 
 ```
-
-[back](../../coding-page.html)

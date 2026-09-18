@@ -1,6 +1,7 @@
 ---
-layout: default
+category: unity
 ---
+-
 
 # Unity 批量替换Shader
 ```cpp
@@ -81,5 +82,3 @@ public class ChangeShader : EditorWindow
     }
 }
 ```
-
-[back](../../coding-page.html)

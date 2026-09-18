@@ -1,10 +1,7 @@
 ---
-layout: default
-
-title: 眼球效果
-date: 2025-10-16
-last_modified_at: 2025-10-16
+category: unity
 ---
+-
 
 # 眼球效果
 
@@ -60,7 +57,3 @@ float2 animatedIrisUV = CirclePupilAnimation(irisUV, pupilRadius, pupilAperture,
 // 合并两个颜色
 sampleRes.rgb = lerp(sampleRes.rgb, irisSampleRes.rgb, sampleRes.a);
 ```
-
-***
-
-[back](../../coding-page.html)

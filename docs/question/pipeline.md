@@ -1,10 +1,4 @@
 ---
-layout: default
-
-title: Pipeline Question
-date: 2025-09-25
-last_modified_at: 2025-10-10
-
 ---
 
 ### 3D RenderTexture保存为3D Texture结果为负
@@ -60,7 +54,3 @@ SAMPLE_TEXTURE_DEPTH(tex.SampleCmpLevelZero)是4像素平均值，软阴影shado
 
 ### unity 内置粒子系统不能使用srp特性
 >需要合批的话，只能规范order和材质队列，简单做法是队列相同3000，对order排序，同材质同order
-
-
-***
-[back](../../question-page.html)

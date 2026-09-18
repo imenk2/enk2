@@ -1,10 +1,7 @@
 ---
-layout: default
-
-title: 卡通渲染面部形变
-date: 2025-11-28
-last_modified_at: 2025-11-28
+category: unity
 ---
+-
 
 # 卡通渲染面部形变
 
@@ -70,7 +67,3 @@ angle = H * V * θ
 因为没有修改顶点法线，光照？
 
 口腔内牙齿、舌头可能穿模？
-
-***
-
-[back](../../coding-page.html)

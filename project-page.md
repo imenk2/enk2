@@ -49,7 +49,3 @@ layout: default
     </div>
 </div>
 
-
-***
-
-[back](./)

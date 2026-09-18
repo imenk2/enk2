@@ -6,14 +6,8 @@ layout: default
 
 ***
 
-[mesh](./docs/question/mesh.html)
-
-[shader](./docs/question/shader.html)
-
-[ui](./docs/question/ui.html)
-
-[pipeline](./docs/question/pipeline.html)
-
-
-***
-[back](./)
+{% assign question_pages = site.pages | where_exp: "p", "p.path contains 'docs/question/'" %}
+{% assign sorted_q = question_pages | sort: "last_modified_at" | reverse %}
+{% for p in sorted_q %}
+[{{ p.title }}]({{ p.url | relative_url }})
+{% endfor %}
