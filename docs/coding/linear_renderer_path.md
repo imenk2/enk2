@@ -3,6 +3,9 @@ category: unity
 ---
 -
 
+# 寻路显示以及平滑
+
+
 基于A*的寻路路径点生成，这里只做之后的显示以及曲线平滑
 这里主要是Catmull-Rom的应用，最终选用的是[Centripetal Catmull–Rom spline](https://en.wikipedia.org/wiki/Centripetal_Catmull%E2%80%93Rom_spline)
 点位计算有问题，请自行修改

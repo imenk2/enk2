@@ -3,6 +3,8 @@ category: unity ui
 ---
 -
 
+# text mesh pro 介绍
+
 ![Branching](../../assets/img/text_mesh_pro/show.gif)
 
 TextMeshPro（TMP）是unity的一套UI文字方案，支持对顶点、颜色进行编辑，自定义强，可扩展等优点。

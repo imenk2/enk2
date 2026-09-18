@@ -3,6 +3,8 @@ category: max
 ---
 -
 
+# max 烘焙随机顶点色
+
 ```python
 //修改顶点色有meshOp和polyOp两种操作，区别是meshOp如果进入到mesh编辑将会丢失模型的modifiers（修改器）
 //为了保留诸如蒙皮等信息，选用polyOp

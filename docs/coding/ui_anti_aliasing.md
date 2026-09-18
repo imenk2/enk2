@@ -3,6 +3,8 @@ category: unity ui
 ---
 -
 
+# ui 半透明抗锯齿测试
+
 ![Branching](../../assets/img/ui_anti_aliasing/test1.gif)
 
 这只是对四边形UI的简单抗锯齿实验
