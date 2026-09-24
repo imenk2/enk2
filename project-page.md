@@ -47,5 +47,9 @@ layout: default
         <a href="https://github.com/imenk2/Unity_SDFGenerator" target="_blank" rel="noopener noreferrer">Unity SDF 批量生成</a>
         <span class="note-tag">Unity</span>
     </div>
+    <div class="note-item" data-category="other">
+        <a href="https://github.com/imenk2/zhihu-shield" target="_blank" rel="noopener noreferrer">zh文章屏蔽器</a>
+        <span class="note-tag">Other</span>
+    </div>
 </div>
 
